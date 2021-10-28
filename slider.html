@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Slider</title>
     <style>
         #slider {
             width: 100%;
@@ -11,26 +17,27 @@
 </head>
 
 <body>
-<div>
- <img id="slider" />
-</div>
+    <div>
+        <img id="slider" />
+    </div>
 
-<script>
-    var imgArray = [
-        'images/Banner_1.png',
-        'images/Banner_2.png',
-        'images/Banner_3.jpg'],
-        curIndex = 0;
+    <script>
+        var imgArray = [
+            'images/Banner_1.png',
+            'images/Banner_2.png',
+            'images/Banner_3.jpg'],
+            curIndex = 0;
         imgDuration = 5000;
 
-    function imageSlider() {
-        document.getElementById('slider').src = imgArray[curIndex];
-        curIndex++;
-        if (curIndex == imgArray.length) { curIndex = 0; }
-        setTimeout("imageSlider()", imgDuration);
-    }
-    imageSlider();
-</script>
+        function imageSlider() {
+            document.getElementById('slider').src = imgArray[curIndex];
+            curIndex++;
+            if (curIndex == imgArray.length) { curIndex = 0; }
+            setTimeout("imageSlider()", imgDuration);
+        }
+        imageSlider();
+    </script>
 
 </body>
+
 </html>
